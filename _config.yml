@@ -11,7 +11,7 @@ github_repo: "https://github.com/404582463/404582463.github.io" # you code repos
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
+sidebar-about-description: "TEST MESSAGE!"
 sidebar-avatar: /img/FC-Bayern-München-logo.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 

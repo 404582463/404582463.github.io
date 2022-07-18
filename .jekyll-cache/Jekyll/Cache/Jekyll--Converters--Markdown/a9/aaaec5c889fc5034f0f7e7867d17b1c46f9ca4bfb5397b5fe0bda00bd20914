@@ -1,0 +1,57 @@
+I"c
+<h2 id="basic-operations">BASIC OPERATIONS</h2>
+<h3 id="wrx-permission-on-file-and-directory">wrx permission on file and directory</h3>
+<ul>
+  <li>if no x permission on a dir, you can not find/see into/serch it.</li>
+  <li>if no w permission on a dir, you can empty the dir but can not delete it.</li>
+</ul>
+
+<h3 id="rm">rm</h3>
+<ul>
+  <li>rm -all is defaultly not recurcive</li>
+  <li>use rm -r to remove a directory</li>
+  <li>rmdir only remove an empty directory</li>
+</ul>
+
+<h3 id="directory-names">directory names</h3>
+<p>better not to use a space in a directory name. For example, <code class="language-plaintext highlighter-rouge">mkdir directory one</code> will generate two directories instead of just one. 
+Ether use <code class="language-plaintext highlighter-rouge">mkdir "directory one"</code> or <code class="language-plaintext highlighter-rouge">mkdir directory_one</code> as a better choice.</p>
+
+<h3 id="other-hotkeys">OTHER HOTKEYS</h3>
+<p>ctrl+l for clear the terminal.</p>
+
+<h2 id="stream">STREAM</h2>
+<p>Defaultly, there are two streams: input and output. Keyboard is the most common input stream of terminal.
+Likely, terminal is the most common output stream.</p>
+
+<p>angle bracket and rewire</p>
+
+<p>double end bracker (append instead of overwrite)</p>
+
+<p>pipe character (chain different programs together)</p>
+
+<h2 id="go-into-kernel-of-computer">GO INTO KERNEL OF COMPUTER</h2>
+<p>cd sys
+looks like a file system but not really is.</p>
+
+<ul>
+  <li>change system parameters
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo echo </span>1000 <span class="o">&gt;</span> brightness <span class="o">(</span>this will fail because <span class="nb">sudo </span>program does not know about how to open brightness<span class="o">)</span>
+</code></pre></div>    </div>
+    <p>the correct way to do this is: (# pound symbol means run as root)</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ # echo 1000 &gt; brightness 
+</code></pre></div>    </div>
+
+    <p>or (run the following command as root)</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo su
+</code></pre></div>    </div>
+
+    <p>or (tee means take the output of the last program as write to)</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ echo 1000 | sudo tee brightness
+</code></pre></div>    </div>
+
+    <h3 id="xdg-open">xdg-open</h3>
+    <p>open a file in a proper way</p>
+  </li>
+</ul>
+:ET

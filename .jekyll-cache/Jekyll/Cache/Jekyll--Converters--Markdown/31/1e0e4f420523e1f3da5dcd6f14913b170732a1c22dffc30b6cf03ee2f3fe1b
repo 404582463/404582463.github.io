@@ -1,0 +1,131 @@
+I"u<h2 id="debugger">debugger</h2>
+<ul>
+  <li>python -m ipdb program.py
+    <ul>
+      <li>c continue</li>
+      <li>b set breakpoint</li>
+      <li>p print
+        <ul>
+          <li>p locals: show all the variables at that step</li>
+        </ul>
+      </li>
+      <li>s ???</li>
+    </ul>
+  </li>
+  <li>gdb for C/C++</li>
+  <li>sudo strace for tracking system calls?</li>
+</ul>
+
+<h2 id="analysis">analysis</h2>
+<ul>
+  <li>static analysis tools for python - pyflakes/mypy
+    <ul>
+      <li>using IDE like vscode, these funcionalities (maybe only a part of all) are usually built-in</li>
+    </ul>
+  </li>
+  <li>statci analysis tools for English - writegood</li>
+</ul>
+
+<h2 id="profiling">profiling</h2>
+<p>optimize the code by consider the cpu/memory/network, etc.</p>
+<h3 id="time">time</h3>
+<ul>
+  <li>terminology: real time, user time, system time
+    <ul>
+      <li>real time: the entire time</li>
+      <li>user time: the time your program spent on the cpu doing user level cycles</li>
+      <li>system time: the time your program spent on the cpu executing kernel mode instructions</li>
+    </ul>
+  </li>
+  <li>bash command <code class="language-plaintext highlighter-rouge">time</code> can show the time to execute an program with the three metrics</li>
+</ul>
+
+<h3 id="profilers">profilers</h3>
+<ul>
+  <li>tracing profilers and sampling profilers
+    <ul>
+      <li>sampling profilers are useful when you execute your program for long enough, you can find out where most of the time is being spent.</li>
+      <li>tracing profilers will add a lot of overhead, but more accurate</li>
+    </ul>
+  </li>
+  <li>cpu profiler: kernprof(line profiler)</li>
+  <li>memory profiler: memory_profiler</li>
+  <li>strace for debugging and trouble shooting programs in Unix-like operating systems such as Linux.
+    <ul>
+      <li><a href="https://strace.io/">offical website</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="visulazation-tools">Visulazation tools</h3>
+<ul>
+  <li>cpu analysis
+    <ul>
+      <li><a href="https://www.brendangregg.com/flamegraphs.html">Flame graph</a></li>
+    </ul>
+  </li>
+  <li>program flow analysis
+    <ul>
+      <li><a href="http://pycallgraph.slowchop.com/en/master/">call graph (or control flow graphs)</a></li>
+      <li>really useful to deal with io-related problem</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="resource-monitoring">Resource Monitoring</h3>
+<p>some of them are mainly for linux env. With other env like windows, maybe there are other better visulization tools.</p>
+<ul>
+  <li>process viewer
+    <ul>
+      <li><a href="https://htop.dev/">htop</a></li>
+      <li><a href="https://nicolargo.github.io/glances/">glances</a></li>
+    </ul>
+  </li>
+  <li>disk usage
+    <ul>
+      <li><a href="https://dev.yorhel.nl/ncdu">ncdu (NCurses Disk Usage)</a></li>
+      <li>
+        <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">du</span> <span class="nt">-h</span> .<span class="se">\v</span>ideos
+</code></pre></div>        </div>
+
+        <blockquote>
+          <p>General Monitoring - Probably the most popular is htop, which is an improved version of top. htop presents various statistics for the currently running processes on the system. htop has a myriad of options and keybinds, some useful ones are: <F6> to sort processes, t to show tree hierarchy and h to toggle threads. See also glances for similar implementation with a great UI. For getting aggregate measures across all processes, dstat is another nifty tool that computes real-time resource metrics for lots of different subsystems like I/O, networking, CPU utilization, context switches, &amp;c.</F6></p>
+        </blockquote>
+
+        <blockquote>
+          <p>I/O operations - iotop displays live I/O usage information and is handy to check if a process is doing heavy I/O disk operations</p>
+        </blockquote>
+
+        <blockquote>
+          <p>Disk Usage - df displays metrics per partitions and du displays disk usage per file for the current directory. In these tools the -h flag tells the program to print with human readable format. A more interactive version of du is ncdu which lets you navigate folders and delete files and folders as you navigate.</p>
+        </blockquote>
+
+        <blockquote>
+          <p>Memory Usage - free displays the total amount of free and used memory in the system. Memory is also displayed in tools like htop.</p>
+        </blockquote>
+
+        <blockquote>
+          <p>Open Files - lsof lists file information about files opened by processes. It can be quite useful for checking which process has opened a specific file.</p>
+        </blockquote>
+
+        <blockquote>
+          <p>Network Connections and Config - ss lets you monitor incoming and outgoing network packets statistics as well as interface statistics. A common use case of ss is figuring out what process is using a given port in a machine. For displaying routing, network devices and interfaces you can use ip. Note that netstat and ifconfig have been deprecated in favor of the former tools respectively.</p>
+        </blockquote>
+
+        <blockquote>
+          <p>Network Usage - nethogs and iftop are good interactive CLI tools for monitoring network usage.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="performance-comparing">performance comparing</h3>
+<ul>
+  <li>Specialized tools
+    <ul>
+      <li><a href="https://github.com/sharkdp/hyperfine">hyperfine</a></li>
+    </ul>
+  </li>
+</ul>
+:ET

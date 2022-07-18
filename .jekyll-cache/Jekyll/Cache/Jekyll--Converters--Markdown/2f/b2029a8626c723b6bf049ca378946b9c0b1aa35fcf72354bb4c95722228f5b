@@ -1,0 +1,27 @@
+I"P<h2 id="git">git</h2>
+<p>nice underlying design but ugly interface</p>
+<ul>
+  <li>what is git history
+a collectionf of files and folders with a top-level directory</li>
+</ul>
+
+<p>tree(folders) blob(files)
+objects
+references(naming repository with human readable message)
+HEAD -&gt; what you are looking at</p>
+
+<ul>
+  <li>
+    <p>an example of how to use help command
+git help init</p>
+  </li>
+  <li>Provide content or type and size information for repository objects
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git cat-file <span class="nt">-p</span> &lt;object <span class="nb">id</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>details: <a href="https://git-scm.com/docs/git-cat-file">official docs</a></li>
+</ul>
+
+<p>git remote 
+git push (push to remote)</p>
+:ET

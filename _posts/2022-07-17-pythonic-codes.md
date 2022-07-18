@@ -12,30 +12,30 @@ tags:								#标签
 
 # Useful Tools
 
-## tool for check if code is pythonic
+## tool for checking if code is pythonic
 - [Pylint documentation](https://pylint.pycqa.org/en/latest/tutorial.html)
-
 - yacs
-  This tool can be used for config management
-  ```py 
-  # here is how to use
-  from yacs.config import CfgNode as CN
+  - This tool can be used for config management
+  - example
+    ```py
+    # here is how to use
 
-  # -----------------------------------------------------------------------------
-  # Config definition
-  # -----------------------------------------------------------------------------
+    from yacs.config import CfgNode as CN
 
-  _C = CN()
-  _C.MODEL = CN()
-  _C.MODEL.DEVICE = "cuda"
-  _C.MODEL.WEIGHT = ""
-  _C.MODEL.PRETRAIN = True
-  _C.MODEL.USE_SYNC_BN = False
-  _C.MODEL.REDUCE_LOSS_NORM = True
-  _C.MODEL.NORM = 'BN' # group normalization or batch normalization
+    # Config definition
 
-  _C.MODEL.INPLACE_ABN = False
+    _C = CN()
+    _C.MODEL = CN()
+    _C.MODEL.DEVICE = "cuda"
+    _C.MODEL.WEIGHT = ""
+    _C.MODEL.PRETRAIN = True
+    _C.MODEL.USE_SYNC_BN = False
+    _C.MODEL.REDUCE_LOSS_NORM = True
+    _C.MODEL.NORM = 'BN' # group normalization or batch normalization
+    
+    _C.MODEL.INPLACE_ABN = False
 
+    ```
 
 ## Extension for vscode
 - Grammarly

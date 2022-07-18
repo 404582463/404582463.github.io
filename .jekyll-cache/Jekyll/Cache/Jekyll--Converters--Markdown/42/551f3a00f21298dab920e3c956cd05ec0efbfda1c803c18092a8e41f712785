@@ -1,0 +1,35 @@
+I"Ä	<h1 id="useful-tools">Useful Tools</h1>
+
+<h2 id="tool-for-checking-if-code-is-pythonic">tool for checking if code is pythonic</h2>
+<ul>
+  <li><a href="https://pylint.pycqa.org/en/latest/tutorial.html">Pylint documentation</a></li>
+  <li>yacs
+    <ul>
+      <li>This tool can be used for config management</li>
+      <li>example
+        <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># here is how to use
+</span>
+<span class="kn">from</span> <span class="nn">yacs.config</span> <span class="kn">import</span> <span class="n">CfgNode</span> <span class="k">as</span> <span class="n">CN</span>
+
+<span class="c1"># Config definition
+</span><span class="n">_C</span> <span class="o">=</span> <span class="n">CN</span><span class="p">()</span>
+<span class="n">_C</span><span class="p">.</span><span class="n">MODEL</span> <span class="o">=</span> <span class="n">CN</span><span class="p">()</span>
+<span class="n">_C</span><span class="p">.</span><span class="n">MODEL</span><span class="p">.</span><span class="n">DEVICE</span> <span class="o">=</span> <span class="s">"cuda"</span>
+<span class="n">_C</span><span class="p">.</span><span class="n">MODEL</span><span class="p">.</span><span class="n">WEIGHT</span> <span class="o">=</span> <span class="s">""</span>
+<span class="n">_C</span><span class="p">.</span><span class="n">MODEL</span><span class="p">.</span><span class="n">PRETRAIN</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">_C</span><span class="p">.</span><span class="n">MODEL</span><span class="p">.</span><span class="n">USE_SYNC_BN</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">_C</span><span class="p">.</span><span class="n">MODEL</span><span class="p">.</span><span class="n">REDUCE_LOSS_NORM</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">_C</span><span class="p">.</span><span class="n">MODEL</span><span class="p">.</span><span class="n">NORM</span> <span class="o">=</span> <span class="s">'BN'</span> <span class="c1"># group normalization or batch normalization
+</span><span class="n">_C</span><span class="p">.</span><span class="n">MODEL</span><span class="p">.</span><span class="n">INPLACE_ABN</span> <span class="o">=</span> <span class="bp">False</span>
+
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="extension-for-vscode">Extension for vscode</h2>
+<ul>
+  <li>Grammarly</li>
+</ul>
+:ET

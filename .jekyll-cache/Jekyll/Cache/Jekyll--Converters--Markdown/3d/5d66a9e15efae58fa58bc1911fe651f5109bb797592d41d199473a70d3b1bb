@@ -1,0 +1,36 @@
+I""<h1 id="useful-tools">Useful Tools</h1>
+
+<h2 id="tool-for-check-if-code-is-pythonic">tool for check if code is pythonic</h2>
+<ul>
+  <li>
+    <p><a href="https://pylint.pycqa.org/en/latest/tutorial.html">Pylint documentation</a></p>
+  </li>
+  <li>
+    <p>yacs
+This tool can be used for config management
+```py</p>
+    <h1 id="here-is-how-to-use">here is how to use</h1>
+    <p>from yacs.config import CfgNode as CN</p>
+
+    <h1>—————————————————————————–</h1>
+    <h1 id="config-definition">Config definition</h1>
+    <h1 id="-1">—————————————————————————–</h1>
+
+    <p>_C = CN()
+_C.MODEL = CN()
+_C.MODEL.DEVICE = “cuda”
+_C.MODEL.WEIGHT = “”
+_C.MODEL.PRETRAIN = True
+_C.MODEL.USE_SYNC_BN = False
+_C.MODEL.REDUCE_LOSS_NORM = True
+_C.MODEL.NORM = ‘BN’ # group normalization or batch normalization</p>
+
+    <p>_C.MODEL.INPLACE_ABN = False</p>
+  </li>
+</ul>
+
+<h2 id="extension-for-vscode">Extension for vscode</h2>
+<ul>
+  <li>Grammarly</li>
+</ul>
+:ET

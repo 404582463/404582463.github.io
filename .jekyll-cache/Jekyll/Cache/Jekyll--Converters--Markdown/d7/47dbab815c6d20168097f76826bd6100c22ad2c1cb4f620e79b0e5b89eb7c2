@@ -1,0 +1,41 @@
+I"P<h1 id="teaching-machines-to-think-with-common-sense--kagnet">Teaching Machines to Think with Common Sense – KagNet</h1>
+<p><a href="https://www.bilibili.com/video/BV1TQ4y1C7Xj?spm_id_from=444.41.0.0">LINK</a></p>
+<h2 id="common-sense-reasoning">common sense reasoning</h2>
+<p>physical objects, properties.affordance / temporal, numerical / human behaviours, social norms / commonsense
+<img src="https://user-images.githubusercontent.com/48316842/134642062-3f37464c-6f70-4859-b597-4dbf31209003.png" alt="image" /></p>
+
+<h2 id="knowledge-aware-reasoning">Knowledge-Aware Reasoning</h2>
+<p>Symbol Space &amp; Semantic Space
+We have a schema graph for the possible answer candidates</p>
+
+<h2 id="schema-graph-challenges">Schema graph (challenges)</h2>
+<ul>
+  <li>usually noisy and incomplete</li>
+  <li>numerous graphs</li>
+  <li>how to select the most related ones</li>
+  <li>how to encode</li>
+  <li>there is no supervision in aligning(对齐) graphs and QA pairs</li>
+  <li>need to be compatible with neural sentence encoders</li>
+</ul>
+
+<h2 id="framework-overview">Framework Overview</h2>
+<p><img src="https://user-images.githubusercontent.com/48316842/134831225-081eeeab-b8e9-4885-8332-7175ecfc796e.png" alt="image" /></p>
+<h3 id="concept-recognition">Concept recognition</h3>
+<ul>
+  <li>tokenization / lemmatization</li>
+  <li>match ConceptNet vocab</li>
+  <li>merge multiple smaller concepts into a longer(larger) one</li>
+  <li><strong>Question Concepts</strong> C<sub>q</sub> and <strong>Answer Concepts</strong> C<sub>a</sub></li>
+</ul>
+
+<h3 id="path-finding">Path finding</h3>
+<ul>
+  <li>find path between each QA-concept pair</li>
+  <li>path pruning by length (&lt;=5 nodes) and embedding-based metric
+    <ul>
+      <li>train knowledge graph embeddings for scoring paths</li>
+      <li>choose the highest-score relation by the KGE</li>
+    </ul>
+  </li>
+</ul>
+:ET

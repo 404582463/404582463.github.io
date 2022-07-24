@@ -1,4 +1,16 @@
-## 
+---
+layout:     post
+title:      SHELL TOOLS AND SCRIPTING
+subtitle:   Useful tools
+date:       2022-07-24 				# 时间
+author:     ZYD 						# 作者
+header-img: img/post-bg-2015.jpg 	#这篇文章标题背景图片
+catalog: true 						# 是否归档
+tags:								#标签
+    - CS basis
+---
+
+## STRINGS
 - string in terminal
   - use double quotes instead of single quotes to import string variables inside a string
   - ```sh
